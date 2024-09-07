@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj6xk11ifmhgu"]
+
+[ext_resource type="PackedScene" uid="uid://cwqgf0rxd1yar" path="res://test_level.tscn" id="1_cvke0"]
+[ext_resource type="PackedScene" uid="uid://2dmd8cpy7ta5" path="res://test_player.tscn" id="2_l51iw"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Test Level" parent="." instance=ExtResource("1_cvke0")]
+
+[node name="Test Player" parent="." instance=ExtResource("2_l51iw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2)
+
+[node name="Camera3D" type="Camera3D" parent="Test Player"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 2, 2.5)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3, 0)

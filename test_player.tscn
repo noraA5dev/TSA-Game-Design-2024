@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://2dmd8cpy7ta5"]
+
+[ext_resource type="Texture2D" uid="uid://c2a7wl1n8fdvk" path="res://icon.svg" id="1_quk3q"]
+[ext_resource type="Script" path="res://test_player.gd" id="1_qxjfd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2wvp5"]
+
+[node name="Test Player" type="CharacterBody3D"]
+script = ExtResource("1_qxjfd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_2wvp5")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_quk3q")
